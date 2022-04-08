@@ -3,7 +3,11 @@ import { ColorModeSwitcher } from "../ColorModeSwitcher"
 import { motion } from "framer-motion"
 import Section from "./Section"
 import Project from "./Project"
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython } from "react-icons/fa"
+import { IoLogoJavascript, IoLogoCss3 } from 'react-icons/io'
+import { SiCsharp } from 'react-icons/si'
+import { AiOutlineConsoleSql } from 'react-icons/ai'
+import { DiGit } from 'react-icons/di'
 
 const Main = () => {
     const variants = {
@@ -22,8 +26,8 @@ const Main = () => {
                     
                     <Center>    
                         <HStack>
-                            <FaGithub size="30px" />
-                            <FaLinkedin size="30px" />
+                            <a href="https://github.com/yousofalgburi" target="_blank" rel="noreferrer"><FaGithub size="30px" /></a>
+                            <a href="https://www.linkedin.com/in/yousof-algburi-410b84209/" target="_blank" rel="noreferrer"><FaLinkedin size="30px"/></a>
                         </HStack>
                     </Center>
                 </Box>
@@ -47,30 +51,57 @@ const Main = () => {
                         <Section>
                             <SimpleGrid spacing={5} mt={5}>
                                 <GridItem>
-                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/project1_cbxu8s.jpg" imageAlt="Destination Social Media App" title="Social media web app build using React, Redux, Node.js, Express.js, and MongoDB" />
+                                    <Project 
+                                    imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/project1_cbxu8s.jpg" 
+                                    imageAlt="Destination Social Media App" 
+                                    title="Social media web app built using React, Redux, Node.js, Express.js, and MongoDB" 
+                                    websiteLink="https://destinationapp.netlify.app/" 
+                                    githubLink="https://github.com/yousofalgburi/destination-mern-stack" />
                                 </GridItem>
                                 <GridItem>
-                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/profile2_s1jnia.jpg" imageAlt="Bug Tracker Team App" title="Bug tracker web app built using React, Node.js, Express.js, and PostgreSQL" />
+                                    <Project 
+                                    imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/profile2_s1jnia.jpg" 
+                                    imageAlt="Bug Tracker Team App" 
+                                    title="Bug tracker web app built using React, Node.js, Express.js, and PostgreSQL"
+                                    websiteLink="https://bugtrackerapplication.herokuapp.com/"
+                                    githubLink="https://github.com/yousofalgburi/bug-tracker-pern-stack" />
                                 </GridItem>
                                 <GridItem>
-                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649439049/project3_tgs1x5.png" imageAlt="Portfolio Website" title="Portfolio website build using React, ChakraUI, and Three.js" />
+                                    <Project 
+                                    imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649439049/project3_tgs1x5.png" 
+                                    imageAlt="Portfolio Website" 
+                                    title="Portfolio website built using React and Chakra UI" 
+                                    githubLink="https://github.com/yousofalgburi/Portfolio-Website" />
                                 </GridItem>
                             </SimpleGrid>
                         </Section>
                         
                         <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
-                        <Section>    
-                            <VStack>
-                                <HStack> <Text fontSize="xl">Frontend Development</Text> < FaReact size="25px" /></HStack>
-                                <HStack> <Text fontSize="xl">Backend Development</Text> <FaNodeJs size="25px" /></HStack>
-                            </VStack>
+                        <Section>
+                            <SimpleGrid columns={2} spacing={20}>
+                                <VStack align="flex-start">
+                                    <Text size="lg" as="u">Programming</Text>
+                                    <HStack> <Text fontSize="lg">JavaScript</Text> <IoLogoJavascript size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Python</Text> <FaPython size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Java</Text> <FaJava size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">C#</Text> <SiCsharp size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">SQL</Text> < AiOutlineConsoleSql size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">HTML5 & CSS3</Text> <FaHtml5 size="25px"/> <IoLogoCss3 size="25px"/></HStack>
+                                </VStack>
+                                <VStack align="flex-start">
+                                    <Text size="lg" as="u">Technologies & Tools</Text>
+                                    <HStack> <Text fontSize="lg">React / Redux</Text> <FaReact size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Node.js / Express.js</Text> <FaNodeJs size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/> <DiGit size="25px"/></HStack>
+                                </VStack>
+                            </SimpleGrid>
                         </Section>
 
                         <Heading size="xl" alignSelf="flex-start">EDUCATION</Heading>
                         <Section>
-                            <Text> PVCC - AS in Computer Science </Text>
-                            <Text> Udemy Certificate 1</Text>
-                            <Text> Udemy Certificate 2</Text>
+                            <Text>- PVCC - A.S. in Computer Science</Text>
+                            <Text>- The Web Developer Bootcamp 2022 by Colt Steele</Text>
+                            <Text>- React - The Complete Guide (incl Hooks, React Router, Redux) by Maximilian Schwarzmüller</Text>
                         </Section>
                     </VStack>
                 </Flex>
