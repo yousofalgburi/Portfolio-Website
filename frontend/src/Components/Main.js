@@ -1,8 +1,9 @@
-import { Container, VStack, Heading, Text, SimpleGrid, GridItem, Image, Flex, Center } from "@chakra-ui/react"
+import { Container, VStack, Heading, Text, SimpleGrid, GridItem, Image, Flex, Center, Box, HStack } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../ColorModeSwitcher"
 import { motion } from "framer-motion"
 import Section from "./Section"
 import Project from "./Project"
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa"
 
 const Main = () => {
     const variants = {
@@ -14,6 +15,19 @@ const Main = () => {
     return (
         <motion.article initial="hidden" animate="enter" exit="exit" variants={variants} transition={{ duration: 0.4, type: 'easeInOut' }} style={{ position: 'relative' }}>
             <Container>
+                <Box mb={3}>
+                    <Box m={3} align="right">
+                        <ColorModeSwitcher />
+                    </Box>
+                    
+                    <Center>    
+                        <HStack>
+                            <FaGithub size="30px" />
+                            <FaLinkedin size="30px" />
+                        </HStack>
+                    </Center>
+                </Box>
+
                 <Flex direction="column">
                     <VStack w="full" h="full" p={10} spacing={10}>
                         <Section>
@@ -22,8 +36,6 @@ const Main = () => {
                             </Center>
 
                             <Heading size="xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
-                            
-                            {/* <ColorModeSwitcher /> */}
 
                             <Text mt={5} fontSize="lg">I'm a self-taught software developer focused on building full-stack web applications.
                                 I started learning coding through Youtube, books, and Udemy eight years ago and have been passionately creating 
@@ -46,17 +58,20 @@ const Main = () => {
                             </SimpleGrid>
                         </Section>
                         
-                        <Section>
-                            <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
-                            <Text>
-                                Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
-                            </Text>
+                        <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
+                        <Section>    
+                            <VStack>
+                                <HStack> <Text fontSize="xl">Frontend Development</Text> < FaReact size="25px" /></HStack>
+                                <HStack> <Text fontSize="xl">Backend Development</Text> <FaNodeJs size="25px" /></HStack>
+                            </VStack>
                         </Section>
 
                         <Heading size="xl" alignSelf="flex-start">EDUCATION</Heading>
-                        <Text>
-                            Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
-                        </Text>
+                        <Section>
+                            <Text> PVCC - AS in Computer Science </Text>
+                            <Text> Udemy Certificate 1</Text>
+                            <Text> Udemy Certificate 2</Text>
+                        </Section>
                     </VStack>
                 </Flex>
             </Container>
