@@ -1,41 +1,66 @@
-import { Container, VStack, Heading, Text, SimpleGrid, GridItem, Image, Flex } from "@chakra-ui/react"
+import { Container, VStack, Heading, Text, SimpleGrid, GridItem, Image, Flex, Center } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../ColorModeSwitcher"
+import { motion } from "framer-motion"
+import Section from "./Section"
+import Project from "./Project"
 
 const Main = () => {
+    const variants = {
+        hidden: { opacity: 0, x: 0, y: 20 },
+        enter: { opacity: 1, x: 0, y: 0 },
+        exit: { opacity: 0, x: -0, y: 20 }
+    }
+
     return (
-        <Container maxW="container.lg" p={20}>
-            <Flex direction="column">
-                <VStack w="full" h="full" p={10} spacing={10}>
-                    <SimpleGrid columns={5}>
-                        <GridItem colSpan={4}>
-                            <Heading size="2xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
-                        </GridItem>
-                        <GridItem colSpan={1} alignSelf="center">
-                            <ColorModeSwitcher />
-                        </GridItem> 
-                    </SimpleGrid>
-                    <Text mt={5} fontSize="lg">I'm a self-taught software developer focused on building full-stack web applications.
-                        I started learning coding through Youtube, books, and Udemy eight years ago and have been passionately creating 
-                        software since.
-                    </Text>
-                    
-                    <Heading size="xl" alignSelf="flex-start">PROJECTS</Heading>
-                    <Text>
-                        Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
-                    </Text>
+        <motion.article initial="hidden" animate="enter" exit="exit" variants={variants} transition={{ duration: 0.4, type: 'easeInOut' }} style={{ position: 'relative' }}>
+            <Container>
+                <Flex direction="column">
+                    <VStack w="full" h="full" p={10} spacing={10}>
+                        <Section>
+                            <Center mb={5}>
+                                <Image borderRadius='full' boxSize='200px' src='https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438524/profile_xzfiqx.jpg' alt='Dan Abramov'/>
+                            </Center>
 
-                    <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
-                    <Text>
-                        Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
-                    </Text>
+                            <Heading size="xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
+                            
+                            {/* <ColorModeSwitcher /> */}
 
-                    <Heading size="xl" alignSelf="flex-start">EDUCATION</Heading>
-                    <Text>
-                        Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
-                    </Text>
-                </VStack>
-            </Flex>
-        </Container>
+                            <Text mt={5} fontSize="lg">I'm a self-taught software developer focused on building full-stack web applications.
+                                I started learning coding through Youtube, books, and Udemy eight years ago and have been passionately creating 
+                                software since.
+                            </Text>
+                        </Section>
+
+                        <Heading size="xl" alignSelf="flex-start" >PROJECTS</Heading>
+                        <Section>
+                            <SimpleGrid spacing={5} mt={5}>
+                                <GridItem>
+                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/project1_cbxu8s.jpg" imageAlt="Destination Social Media App" title="Social media web app build using React, Redux, Node.js, Express.js, and MongoDB" />
+                                </GridItem>
+                                <GridItem>
+                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/profile2_s1jnia.jpg" imageAlt="Bug Tracker Team App" title="Bug tracker web app built using React, Node.js, Express.js, and PostgreSQL" />
+                                </GridItem>
+                                <GridItem>
+                                    <Project imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649439049/project3_tgs1x5.png" imageAlt="Portfolio Website" title="Portfolio website build using React, ChakraUI, and Three.js" />
+                                </GridItem>
+                            </SimpleGrid>
+                        </Section>
+                        
+                        <Section>
+                            <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
+                            <Text>
+                                Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
+                            </Text>
+                        </Section>
+
+                        <Heading size="xl" alignSelf="flex-start">EDUCATION</Heading>
+                        <Text>
+                            Section to highlight my projects. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium quis quidem et nemo. Deserunt iure dignissimos error deleniti repudiandae, dicta eius asperiores fuga a blanditiis saepe tempora obcaecati sapiente!
+                        </Text>
+                    </VStack>
+                </Flex>
+            </Container>
+        </motion.article>
     )
 }
 
