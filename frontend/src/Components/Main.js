@@ -3,10 +3,10 @@ import { ColorModeSwitcher } from "../ColorModeSwitcher"
 import { motion } from "framer-motion"
 import Section from "./Section"
 import Project from "./Project"
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython, FaDocker } from "react-icons/fa"
 import { IoLogoJavascript, IoLogoCss3 } from 'react-icons/io'
-import { SiCsharp } from 'react-icons/si'
-import { AiOutlineConsoleSql } from 'react-icons/ai'
+import { SiCsharp, SiMongodb, SiPostgresql } from 'react-icons/si'
+import { AiOutlineConsoleSql, AiOutlineCopyrightCircle } from 'react-icons/ai'
 import { DiGit } from 'react-icons/di'
 
 const Main = () => {
@@ -93,6 +93,9 @@ const Main = () => {
                                     <HStack> <Text fontSize="lg">React / Redux</Text> <FaReact size="25px"/></HStack>
                                     <HStack> <Text fontSize="lg">Node.js / Express.js</Text> <FaNodeJs size="25px"/></HStack>
                                     <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/> <DiGit size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Mongodb</Text> <SiMongodb size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Postgresql</Text> <SiPostgresql size="25px"/></HStack>
+                                    <HStack> <Text fontSize="lg">Docker</Text> <FaDocker size="25px"/></HStack>
                                 </VStack>
                             </SimpleGrid>
                         </Section>
@@ -105,6 +108,12 @@ const Main = () => {
                         </Section>
                     </VStack>
                 </Flex>
+
+                <Center mt={3} mb={5}>
+                    <HStack>
+                        <AiOutlineCopyrightCircle/> <Text>Yousof Algburi</Text> 
+                    </HStack>
+                </Center>
             </Container>
         </motion.article>
     )
