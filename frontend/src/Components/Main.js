@@ -36,14 +36,16 @@ const Main = () => {
                     <VStack w="full" h="full" p={10} spacing={10}>
                         <Section>
                             <Center mb={5}>
-                                <Image borderRadius='full' boxSize='200px' src='https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438524/profile_xzfiqx.jpg' alt='Dan Abramov'/>
+                                <Image borderRadius='full' boxSize='200px' src='https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438524/profile_xzfiqx.jpg' alt='Yousof Algburi'/>
                             </Center>
 
                             <Heading size="xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
-
-                            <Text mt={5} fontSize="lg">I'm a self-taught software developer focused on building full-stack web applications.
-                                I started learning coding through Youtube, books, and Udemy eight years ago and have been passionately creating 
-                                software since.
+                            
+                            <Text mt={5} fontSize="lg">
+                                I'm a self-taught software developer focused on building full-stack web applications.
+                                I started learning to code through online video courses eight years ago and have been passionately creating 
+                                software ever since. I'm always eager to learn and I continue to add to my coding skills both independently and in 
+                                the classroom.
                             </Text>
                         </Section>
 
@@ -68,7 +70,7 @@ const Main = () => {
                                 </GridItem>
                                 <GridItem>
                                     <Project 
-                                    imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649439049/project3_tgs1x5.png" 
+                                    imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649474847/project3_vn3v2l.jpg" 
                                     imageAlt="Portfolio Website" 
                                     title="Portfolio website built using React and Chakra UI" 
                                     githubLink="https://github.com/yousofalgburi/Portfolio-Website" />
