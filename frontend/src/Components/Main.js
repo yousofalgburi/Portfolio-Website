@@ -5,7 +5,7 @@ import Section from "./Section"
 import Project from "./Project"
 import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython, FaDocker } from "react-icons/fa"
 import { IoLogoJavascript, IoLogoCss3 } from 'react-icons/io'
-import { SiCsharp, SiMongodb, SiPostgresql, SiAmazonaws, SiElectron, SiKubernetes } from 'react-icons/si'
+import { SiCsharp, SiMongodb, SiPostgresql, SiAmazonaws, SiElectron, SiKubernetes, SiTypescript } from 'react-icons/si'
 import { AiOutlineConsoleSql, AiOutlineCopyrightCircle } from 'react-icons/ai'
 import {  DiGit } from 'react-icons/di'
 
@@ -113,10 +113,11 @@ const Main = () => {
                                                 <GridItem colSpan={[2, 2, 1]}>
                                                     <HStack> <Text fontSize="lg">React / Redux</Text> <FaReact size="25px"/></HStack>
                                                     <HStack> <Text fontSize="lg">Node.js / Express.js</Text> <FaNodeJs size="25px"/></HStack>
-                                                    <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/> <DiGit size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/></HStack>
                                                     <HStack> <Text fontSize="lg">Mongodb</Text> <SiMongodb size="25px"/></HStack>
                                                     <HStack> <Text fontSize="lg">Postgresql</Text> <SiPostgresql size="25px"/></HStack>
                                                     <HStack> <Text fontSize="lg">Docker</Text> <FaDocker size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">TypeScript</Text> <SiTypescript size="25px"/></HStack>
                                                 </GridItem>
                                                 <GridItem colSpan={[2, 2, 1]}>
                                                     <HStack> <Text fontSize="lg">AWS</Text> <SiAmazonaws size="25px"/></HStack>
