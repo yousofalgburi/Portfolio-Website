@@ -5,9 +5,9 @@ import Section from "./Section"
 import Project from "./Project"
 import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython, FaDocker } from "react-icons/fa"
 import { IoLogoJavascript, IoLogoCss3 } from 'react-icons/io'
-import { SiCsharp, SiMongodb, SiPostgresql } from 'react-icons/si'
+import { SiCsharp, SiMongodb, SiPostgresql, SiAmazonaws, SiElectron, SiKubernetes } from 'react-icons/si'
 import { AiOutlineConsoleSql, AiOutlineCopyrightCircle } from 'react-icons/ai'
-import { DiGit } from 'react-icons/di'
+import {  DiGit } from 'react-icons/di'
 
 const Main = () => {
     const variants = {
@@ -18,7 +18,7 @@ const Main = () => {
 
     return (
         <motion.article initial="hidden" animate="enter" exit="exit" variants={variants} transition={{ duration: 0.4, type: 'easeInOut' }} style={{ position: 'relative' }}>
-            <Container>
+            <Container maxW="container.lg">
                 <Box mb={3}>
                     <Box m={3} align="right">
                         <ColorModeSwitcher />
@@ -35,24 +35,29 @@ const Main = () => {
                 <Flex direction="column">
                     <VStack w="full" h="full" p={10} spacing={10}>
                         <Section>
-                            <Center mb={5}>
-                                <Image borderRadius='full' boxSize='200px' src='https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438524/profile_xzfiqx.jpg' alt='Yousof Algburi'/>
-                            </Center>
-
-                            <Heading size="xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
-                            
-                            <Text mt={5} fontSize="lg">
-                                I'm a self-taught software developer focused on building full-stack web applications.
-                                I started learning to code through online video courses eight years ago and have been passionately creating 
-                                software ever since. I'm always eager to learn and I continue to add to my coding skills both independently and in 
-                                the classroom.
-                            </Text>
+                            <SimpleGrid columns={3}>
+                                <GridItem colSpan={[3, 3, 1]}>
+                                    <Center mb={5}>
+                                        <Image borderRadius='full' boxSize='200px' src='https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438524/profile_xzfiqx.jpg' alt='Yousof Algburi'/>
+                                    </Center>
+                                </GridItem>
+                                
+                                <GridItem colSpan={[3, 3, 2]}>
+                                    <Heading size="xl" >👋 Hi! I'm Yousof Algburi.</Heading> 
+                                    <Text mt={5} fontSize="lg">
+                                        I'm a self-taught software developer focused on building full-stack web applications.
+                                        I started learning to code through online video courses eight years ago and have been passionately creating 
+                                        software ever since. I'm always eager to learn and I continue to add to my coding skills both independently and in 
+                                        the classroom.
+                                    </Text>
+                                </GridItem>
+                            </SimpleGrid>
                         </Section>
 
                         <Heading size="xl" alignSelf="flex-start" >PROJECTS</Heading>
                         <Section>
-                            <SimpleGrid spacing={5} mt={5}>
-                                <GridItem>
+                            <SimpleGrid columns={2} spacing={5} mt={5}>
+                                <GridItem colSpan={[2, 2, 1]}>
                                     <Project 
                                     imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/project1_cbxu8s.jpg" 
                                     imageAlt="Destination Social Media App" 
@@ -60,7 +65,7 @@ const Main = () => {
                                     websiteLink="https://destinationapp.netlify.app/" 
                                     githubLink="https://github.com/yousofalgburi/destination-mern-stack" />
                                 </GridItem>
-                                <GridItem>
+                                <GridItem colSpan={[2, 2, 1]}>
                                     <Project 
                                     imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649438808/profile2_s1jnia.jpg" 
                                     imageAlt="Bug Tracker Team App" 
@@ -68,12 +73,20 @@ const Main = () => {
                                     websiteLink="https://bugtrackerapplication.herokuapp.com/"
                                     githubLink="https://github.com/yousofalgburi/bug-tracker-pern-stack" />
                                 </GridItem>
-                                <GridItem>
+                                <GridItem colSpan={[2, 2, 1]}>
                                     <Project 
                                     imageUrl="https://res.cloudinary.com/dcqzhsbcc/image/upload/v1649474847/project3_vn3v2l.jpg" 
                                     imageAlt="Portfolio Website" 
                                     title="Portfolio website built using React and Chakra UI" 
                                     githubLink="https://github.com/yousofalgburi/Portfolio-Website" />
+                                </GridItem>
+                                <GridItem colSpan={[2, 2, 1]}>
+                                    <Project 
+                                    imageUrl="" 
+                                    imageAlt="Coming soon.." 
+                                    title="Coming soon.. Next.js & Typescript project" 
+                                    websiteLink=""
+                                    githubLink="" />
                                 </GridItem>
                             </SimpleGrid>
                         </Section>
@@ -81,32 +94,49 @@ const Main = () => {
                         <Heading size="xl" alignSelf="flex-start">SKILLS</Heading>
                         <Section>
                             <SimpleGrid columns={2} spacing={20}>
-                                <VStack align="flex-start">
-                                    <Text size="lg" as="u">Programming</Text>
-                                    <HStack> <Text fontSize="lg">JavaScript</Text> <IoLogoJavascript size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Python</Text> <FaPython size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Java</Text> <FaJava size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">C#</Text> <SiCsharp size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">SQL</Text> < AiOutlineConsoleSql size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">HTML5 & CSS3</Text> <FaHtml5 size="25px"/> <IoLogoCss3 size="25px"/></HStack>
-                                </VStack>
-                                <VStack align="flex-start">
-                                    <Text size="lg" as="u">Technologies & Tools</Text>
-                                    <HStack> <Text fontSize="lg">React / Redux</Text> <FaReact size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Node.js / Express.js</Text> <FaNodeJs size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/> <DiGit size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Mongodb</Text> <SiMongodb size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Postgresql</Text> <SiPostgresql size="25px"/></HStack>
-                                    <HStack> <Text fontSize="lg">Docker</Text> <FaDocker size="25px"/></HStack>
-                                </VStack>
+                                <GridItem colSpan={[2, 2, 1]}>
+                                    <VStack align="flex-start">
+                                        <Text size="lg" as="u">Programming</Text>
+                                        <HStack> <Text fontSize="lg">JavaScript</Text> <IoLogoJavascript size="25px"/></HStack>
+                                        <HStack> <Text fontSize="lg">Python</Text> <FaPython size="25px"/></HStack>
+                                        <HStack> <Text fontSize="lg">Java</Text> <FaJava size="25px"/></HStack>
+                                        <HStack> <Text fontSize="lg">C#</Text> <SiCsharp size="25px"/></HStack>
+                                        <HStack> <Text fontSize="lg">SQL</Text> < AiOutlineConsoleSql size="25px"/></HStack>
+                                        <HStack> <Text fontSize="lg">HTML5 & CSS3</Text> <FaHtml5 size="25px"/> <IoLogoCss3 size="25px"/></HStack>
+                                    </VStack>
+                                </GridItem>
+
+                                <GridItem colSpan={[2, 2, 1]}>
+                                    <VStack align="flex-start">
+                                        <Text size="lg" as="u">Technologies & Tools</Text>
+                                            <SimpleGrid columns={2} spacing={[0, 0, 5]}>
+                                                <GridItem colSpan={[2, 2, 1]}>
+                                                    <HStack> <Text fontSize="lg">React / Redux</Text> <FaReact size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Node.js / Express.js</Text> <FaNodeJs size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Github / Git</Text> <FaGithub size="25px"/> <DiGit size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Mongodb</Text> <SiMongodb size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Postgresql</Text> <SiPostgresql size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Docker</Text> <FaDocker size="25px"/></HStack>
+                                                </GridItem>
+                                                <GridItem colSpan={[2, 2, 1]}>
+                                                    <HStack> <Text fontSize="lg">AWS</Text> <SiAmazonaws size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Electron</Text> <SiElectron size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">Kubernetes</Text> <SiKubernetes size="25px"/></HStack>
+                                                    <HStack> <Text fontSize="lg">React Native</Text> </HStack>
+                                                    <HStack> <Text fontSize="lg">Next.js</Text> </HStack>
+                                                    <HStack> <Text fontSize="lg">Material UI / Chakra UI</Text></HStack>
+                                                </GridItem>
+                                            </SimpleGrid>
+                                    </VStack>
+                                </GridItem>
                             </SimpleGrid>
                         </Section>
 
                         <Heading size="xl" alignSelf="flex-start">EDUCATION</Heading>
                         <Section>
                             <Text>- PVCC - A.S. in Computer Science</Text>
-                            <Text>- The Web Developer Bootcamp 2022 by Colt Steele</Text>
-                            <Text>- React - The Complete Guide (incl Hooks, React Router, Redux) by Maximilian Schwarzmüller</Text>
+                            <Text>- Udemy: The Web Developer Bootcamp 2022 by Colt Steele</Text>
+                            <Text>- Udemy: React - The Complete Guide (incl Hooks, React Router, Redux) by Maximilian Schwarzmüller</Text>
                         </Section>
                     </VStack>
                 </Flex>
