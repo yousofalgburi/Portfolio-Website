@@ -5,7 +5,7 @@ import Section from "./Section"
 import Project from "./Project"
 import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaHtml5, FaJava, FaPython, FaDocker } from "react-icons/fa"
 import { IoLogoJavascript, IoLogoCss3 } from 'react-icons/io'
-import { SiCsharp, SiMongodb, SiPostgresql, SiAmazonaws, SiElectron, SiKubernetes } from 'react-icons/si'
+import { SiCsharp, SiMongodb, SiPostgresql, SiAmazonaws, SiElectron, SiKubernetes, SiBootstrap, SiBulma } from 'react-icons/si'
 import { AiOutlineConsoleSql, AiOutlineCopyrightCircle } from 'react-icons/ai'
 import {  DiGit } from 'react-icons/di'
 
@@ -125,6 +125,7 @@ const Main = () => {
                                                     <HStack> <Text fontSize="lg">React Native</Text> </HStack>
                                                     <HStack> <Text fontSize="lg">Next.js</Text> </HStack>
                                                     <HStack> <Text fontSize="lg">Material UI / Chakra UI</Text></HStack>
+                                                    <HStack> <Text fontSize="lg">Bootstrap / Bulma</Text><SiBootstrap size="25px"/> <SiBulma size="25px"/></HStack>
                                                 </GridItem>
                                             </SimpleGrid>
                                     </VStack>
