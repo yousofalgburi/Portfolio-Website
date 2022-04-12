@@ -125,6 +125,7 @@ const Main = () => {
                                                     <HStack> <Text fontSize="lg">React Native</Text> </HStack>
                                                     <HStack> <Text fontSize="lg">Next.js</Text> </HStack>
                                                     <HStack> <Text fontSize="lg">Material UI / Chakra UI</Text></HStack>
+                                                    <HStack> <Text fontSize="lg">Bootstrap / Bulma</Text></HStack>
                                                 </GridItem>
                                             </SimpleGrid>
                                     </VStack>
